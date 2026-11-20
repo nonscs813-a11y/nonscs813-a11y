@@ -4,11 +4,12 @@
 
 <br />
 
-[![HTML5 Semântico](https://img.shields.io/badge/HTML5_Semântico-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/nonscs813-a11y)
-[![CSS3 Design System](https://img.shields.io/badge/CSS3_Moderno-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/nonscs813-a11y)
+[![Enterprise Tests 150/150](https://img.shields.io/badge/Testes_Automatizados-150%2F150_Passing-10B981?style=for-the-badge&logo=node.js&logoColor=white)](https://github.com/nonscs813-a11y)
+[![Segurança OWASP Top 10](https://img.shields.io/badge/Segurança-OWASP_Top_10_%26_CSP-0EA5E9?style=for-the-badge&logo=cloudflare&logoColor=white)](https://github.com/nonscs813-a11y)
+[![Privacidade LGPD](https://img.shields.io/badge/Privacidade-LGPD_Privacy--by--Design-8B5CF6?style=for-the-badge)](https://github.com/nonscs813-a11y)
+[![HTML5 & CSS3](https://img.shields.io/badge/HTML5_%26_CSS3-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/nonscs813-a11y)
 [![JavaScript ES2026](https://img.shields.io/badge/JavaScript_ES2026-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/nonscs813-a11y)
-[![Firebase Cloud](https://img.shields.io/badge/Firebase_Realtime_%26_Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://github.com/nonscs813-a11y)
-[![Acessibilidade WCAG AAA](https://img.shields.io/badge/Acessibilidade-WCAG_AAA-10B981?style=for-the-badge)](https://github.com/nonscs813-a11y)
+[![Firebase Cloud](https://img.shields.io/badge/Firebase_Cloud-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://github.com/nonscs813-a11y)
 
 </div>
 
@@ -16,69 +17,70 @@
 
 ## ⚡ Sobre Mim
 
-Sou **Desenvolvedor Web Sênior e Arquiteto de Interfaces**, especializado na construção de **sistemas web 100% nativos, ultra-rápidos e orientados à conversão** para empresas e negócios reais.
+Sou **Desenvolvedor Web Sênior e Arquiteto de Sistemas**, especializado na engenharia de **aplicações web 100% nativas, blindadas (OWASP Top 10), compatíveis com a LGPD (*Privacy-by-Design*) e validadas por suítes de testes automatizados**.
 
-Minha filosofia de engenharia elimina camadas desnecessárias de complexidade (*Zero-Bloat Architecture*): cada aplicação é projetada com **HTML5 semântico**, **CSS3 modular de nível de produção** (Custom Properties, Grid/Flexbox fluido, micro-interações a 60fps), **JavaScript moderno (ES2026)** e persistência em nuvem em tempo real com **Google Firebase (Firestore / Realtime Database / Hosting)**.
+Minha filosofia de engenharia une **Performance Extrema (*Zero-Bloat Architecture*)** com **Rigor Empresarial 10/10**: cada aplicação é construída com **HTML5 semântico**, **CSS3 modular** (Custom Properties, Grid/Flexbox fluido a 60fps), **JavaScript moderno (ES2026)**, persistência reativa com **Google Firebase (Firestore / Realtime Database)**, cabeçalhos de segurança **CSP / HSTS** e **suíte de 15 testes automatizados por projeto (`150/150 testes aprovados` via `node --test`)**.
 
-- 🎯 **Performance Extrema:** Carregamento instantâneo (`LCP < 0.8s`) e nota **100/100 no Google Lighthouse / Core Web Vitals**.
-- ♿ **Acessibilidade por Padrão (`a11y`):** Navegação completa por teclado, semântica ARIA rigorosa e contraste validado **WCAG AA/AAA**.
-- 🔥 **Sistemas Reativos em Nuvem:** Sincronização em tempo real de agendamentos, pedidos, ordens de serviço e painéis administrativos via **Firebase**.
-- 🎨 **Design System Autoral:** Interfaces refinadas, responsivas (*Mobile-First*) e focadas na experiência real do cliente final.
+- 🛡️ **Segurança Defensiva & Ofensiva (OWASP Top 10):** Sanitização determinística contra XSS (`escapeHTML` + DOM Sinks seguros via `createElement`), bloqueio recursivo de NoSQL Injection, SQLi e Prototype Pollution (`detectMaliciousPayload`), `RateLimiter` sliding-window contra flood/DoS, Content Security Policy (CSP) estrita, assinatura criptográfica de integridade FNV-1a 64-bit (`computeIntegrityHash` / `verifyIntegrity`) e validação de schema no `firestore.rules`.
+- 🔒 **Privacidade por Design (LGPD — Lei nº 13.709/2018):** Mascaramento automático de dados pessoais sensíveis (`maskPII` para telefones, e-mails e endereços), validação obrigatória de consentimento explícito (`lgpdConsent: true`) e botão de Direito ao Esquecimento / Expurgo imediato (Art. 18 LGPD — `purgeAllUserData`).
+- 🧪 **Qualidade Auditada por Testes (150 Testes Automatizados):** Todos os 10 sistemas possuem suíte de testes (`tests/enterprise.test.js`) cobrindo segurança, privacidade, aritmética financeira em centavos inteiros (livre de desvios IEEE-754), máquina de estados CRUD e auditoria estática de arquitetura.
 
 ---
 
-## 🏗️ Arquitetura Padrão — Ecossistema Web + Firebase
+## 🏗️ Arquitetura Empresarial — Ecossistema Web + Firebase + OWASP + LGPD
 
 ![Arquitetura Padronizada HTML5 + CSS3 + JS + Firebase](./assets/arquitetura-firebase-web.gif)
 
-Todos os projetos do portfólio seguem uma arquitetura enxuta, auditável e de altíssima manutenibilidade:
-
 ```text
-📦 repositorio-negocio-local/
- ┣ 📜 index.html        # Estrutura HTML5 semântica, SEO Local (Schema.org JSON-LD), OpenGraph e WCAG AAA
- ┣ 🎨 styles.css        # Design System completo em CSS3 puro (Variáveis, Dark/Light UI, Grid Responsivo)
- ┣ ⚡ app.js            # Motor da aplicação em JavaScript ES2026 + Integração Modular Firebase Cloud
- ┣ 🔥 firebase.json     # Configuração de deploy, cache de ativos e regras de segurança do banco
- ┣ 🛡️ firestore.rules   # Regras de segurança e validação de schema do Firebase Firestore
- ┗ 📘 README.md         # Documentação técnica, modelo de dados do Firebase e guia de execução
+📦 repositorio-empresarial/
+ ┣ 📂 tests/enterprise.test.js  # Suíte de 15 testes automatizados (OWASP, LGPD, Hash FNV-1a, Finanças e CSP)
+ ┣ 📂 ci/github-actions-ci.yml  # Pipeline CI/CD para execução automatizada da suíte de testes
+ ┣ 📜 index.html                # HTML5 semântico, Content-Security-Policy (CSP), Schema.org JSON-LD e WCAG AAA
+ ┣ 🎨 styles.css                # Design System autoral em CSS3 puro (Variáveis, Dark UI, Grid Responsivo)
+ ┣ ⚡ app.js                    # Motor ES2026 + Camada OWASP + Mascaramento LGPD + Persistência Firebase Cloud
+ ┣ 🔥 firebase.json             # Headers HTTP de segurança (HSTS, X-Frame-Options: DENY, nosniff, Permissions)
+ ┣ 🛡️ firestore.rules           # Regras de segurança do Firebase com validação de schema, LGPD e Hash
+ ┣ 🔐 SECURITY.md               # Política de segurança OWASP Top 10 e governança de privacidade LGPD
+ ┣ 📦 package.json              # Scripts de execução de testes e auditoria (npm test)
+ ┗ 📘 README.md                 # Documentação de arquitetura, segurança e guia de execução
 ```
 
 ---
 
-## 🚀 Portfólio: 10 Sistemas Web Completos para Negócios Locais
+## 🚀 Portfólio: 10 Plataformas Web Empresariais (`150/150 Testes Aprovados`)
 
-Uma suíte completa de **10 aplicações web de produção** desenvolvidas com **1 arquivo HTML + 1 arquivo CSS + 1 arquivo JavaScript + Banco de Dados Firebase**, cobrindo os principais segmentos do comércio e serviços locais:
+Suíte completa de **10 aplicações web de produção** desenvolvidas com **1 arquivo HTML + 1 arquivo CSS + 1 arquivo JavaScript + Banco de Dados Firebase**, auditadas com **15 testes automatizados em cada repositório**:
 
-| # | Sistema & Segmento | Código-Fonte & Demo Ao Vivo | Módulos Reativos & Banco de Dados Firebase | Stack Principal |
+| # | Plataforma & Segmento | Repositório & Produção Ao Vivo | Engenharia, Segurança OWASP, LGPD & Módulos Firebase | Auditoria |
 | :-: | :--- | :--- | :--- | :---: |
-| **01** | 💈 **Barbearia Prime & Club**<br/>*Estética Masculina & Agendamento* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/01-barbearia-prime-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/01-barbearia-prime-firebase/) | Agendamento de horários em tempo real, seleção de barbeiro, cálculo automático de combo e fila ao vivo no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **02** | 🦷 **Clínica OdontoVida**<br/>*Odontologia & Saúde Integrada* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/02-clinica-odontologica-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/02-clinica-odontologica-firebase/) | Triagem inteligente de especialidades, marcação de avaliação, histórico de agendamentos e painel da recepção no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **03** | 🍕 **Forno & Brasa Pizzaria**<br/>*Gastronomia & Delivery Direto* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/03-pizzaria-delivery-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/03-pizzaria-delivery-firebase/) | Cardápio artesanal interativo, simulador de pedido, frete instantâneo e monitor de cozinha (KDS) em tempo real no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **04** | 🔧 **AutoTech Centro Automotivo**<br/>*Oficina Mecânica & Diagnóstico* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/04-oficina-mecanica-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/04-oficina-mecanica-firebase/) | Consulta de Ordem de Serviço (OS) por placa em tempo real, simulador de revisão preventiva e agendamento de box no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **05** | 🏢 **Vértice Imobiliária Boutique**<br/>*Mercado Imobiliário & Alto Padrão* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/05-imobiliaria-boutique-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/05-imobiliaria-boutique-firebase/) | Busca multicritério instantânea, simulador patrimonial, carteira de alto padrão e agendamento de visitas no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **06** | 🏋️ **Pulse Studio & Performance**<br/>*Academia, Cross & Treinamento* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/06-academia-studio-fit-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/06-academia-studio-fit-firebase/) | Grade dinâmica de turmas com check-in em tempo real, simulador de protocolos e reserva de aula experimental no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **07** | 🐾 **Mundo Pet & Veterinária**<br/>*Pet Shop, Banho & Tosa e Clínica* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/07-petshop-veterinaria-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/07-petshop-veterinaria-firebase/) | Agendamento de Banho & Tosa por porte/pelagem, cadastro do pet, controle de vacinas e status do atendimento ao vivo no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **08** | ⚖️ **Valença & Associados**<br/>*Advocacia Empresarial & Civil* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/08-escritorio-advocacia-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/08-escritorio-advocacia-firebase/) | Triagem jurídica interativa por área (Empresarial, Imobiliário, Tributário, Sucessões), agendamento e protocolo no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **09** | ☕ **Grão Nobre Cafeteria & Bistrô**<br/>*Cafés Especiais & Reserva de Mesas* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/09-cafeteria-bistro-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/09-cafeteria-bistro-firebase/) | Mapa interativo de reserva de mesas por ambiente, menu de cafés especiais SCA e pedidos sincronizados no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **10** | ☀️ **Helios Energia Solar**<br/>*Engenharia Fotovoltaica & Projetos* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/nonscs813-a11y/tree/main/10-energia-solar-engenharia-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/nonscs813-a11y/10-energia-solar-engenharia-firebase/) | Dimensionamento fotovoltaico (kWp), projeção de payback e geração de proposta de vistoria técnica no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
+| **01** | 💈 **Kronos Barber Club**<br/>*Gestão & Estética Masculina* | 📂 [**`kronos-barber-club`**](https://github.com/nonscs813-a11y/kronos-barber-club)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/kronos-barber-club/) | Agendamento em tempo real, simulador de combos em centavos inteiros, fila ao vivo no Firebase, `maskPII` LGPD e proteção OWASP. | `✓ 15/15 Tests` |
+| **02** | 🦷 **Lumina Odontologia Digital**<br/>*Prontuário & Clínica Médica* | 📂 [**`lumina-odonto-clinic`**](https://github.com/nonscs813-a11y/lumina-odonto-clinic)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/lumina-odonto-clinic/) | Triagem clínica de especialidades, planejamento de sessões, agenda médica sincronizada, assinatura FNV-1a e proteção LGPD. | `✓ 15/15 Tests` |
+| **03** | 🍕 **Vesuvio Forno & Brasa**<br/>*Delivery Direto & Monitor KDS* | 📂 [**`vesuvio-forno-kds`**](https://github.com/nonscs813-a11y/vesuvio-forno-kds)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/vesuvio-forno-kds/) | Cardápio interativo, cálculo de pedido sem taxas intermediárias e monitor de cozinha (KDS) em tempo real no Firebase. | `✓ 15/15 Tests` |
+| **04** | 🔧 **Valkyrie AutoTech**<br/>*Telemetria & Ordem de Serviço* | 📂 [**`valkyrie-autotech-os`**](https://github.com/nonscs813-a11y/valkyrie-autotech-os)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/valkyrie-autotech-os/) | Acompanhamento de Ordem de Serviço (OS) por placa, simulador de revisão preventiva e controle de box no Firebase. | `✓ 15/15 Tests` |
+| **05** | 🏢 **Vértice Private Estates**<br/>*CRM Imobiliário & Patrimônio* | 📂 [**`vertice-estates-crm`**](https://github.com/nonscs813-a11y/vertice-estates-crm)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/vertice-estates-crm/) | Curadoria de imóveis de alto padrão, simulador financeiro de precisão e CRM de visitas privadas com proteção de dados LGPD. | `✓ 15/15 Tests` |
+| **06** | 🏋️ **Pulse Athletics & Performance**<br/>*Controle de Turmas & Check-in* | 📂 [**`pulse-athletics-hub`**](https://github.com/nonscs813-a11y/pulse-athletics-hub)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/pulse-athletics-hub/) | Quadro de check-in de turmas ao vivo, simulador de protocolos metabólicos e gestão de atletas sincronizada no Firebase. | `✓ 15/15 Tests` |
+| **07** | 🐾 **Aurora Vet & Pet Care**<br/>*Hospital Veterinário & Estética* | 📂 [**`aurora-vet-care`**](https://github.com/nonscs813-a11y/aurora-vet-care)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/aurora-vet-care/) | Monitoramento ao vivo de Banho & Tosa, protocolo de vacinação e prontuário veterinário sincronizado no Firebase. | `✓ 15/15 Tests` |
+| **08** | ⚖️ **Valença & Associados**<br/>*Governança & Triagem Jurídica* | 📂 [**`valenca-legal-suite`**](https://github.com/nonscs813-a11y/valenca-legal-suite)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/valenca-legal-suite/) | Triagem jurídica empresarial/societária, estimador de escopo consultivo e protocolo digital assinado no Firebase. | `✓ 15/15 Tests` |
+| **09** | ☕ **Grão Nobre Roastery & Bistrô**<br/>*Cafés Especiais SCA & Reservas* | 📂 [**`grao-nobre-roastery`**](https://github.com/nonscs813-a11y/grao-nobre-roastery)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/grao-nobre-roastery/) | Hostess digital com mapa de reservas por ambiente, menu sensorial de microlotes SCA e sincronização Firebase. | `✓ 15/15 Tests` |
+| **10** | ☀️ **Helios Solar Grid**<br/>*Engenharia Fotovoltaica & Usinas* | 📂 [**`helios-solar-grid`**](https://github.com/nonscs813-a11y/helios-solar-grid)<br/>🌐 [**Abrir Plataforma**](https://nonscs813-a11y.github.io/helios-solar-grid/) | Dimensionamento de potência (kWp), cálculo de payback de 25 anos e pipeline de homologação técnica no Firebase. | `✓ 15/15 Tests` |
 
 ---
 
-## 🛠️ Matriz de Competências Técnicas
+## 🛠️ Matriz de Competências & Governança de Engenharia
 
-| Domínio | Tecnologias & Padrões de Engenharia |
+| Domínio | Tecnologias, Padrões & Controles de Qualidade |
 | :--- | :--- |
-| **Front-End Core (100% Web)** | `HTML5 Semântico` • `CSS3 Grid & Flexbox` • `CSS Custom Properties` • `JavaScript ES2026+` • `Web Components` • `DOM API Otimizada` |
-| **Back-End Serverless & Dados** | `Firebase Firestore` • `Firebase Realtime Database` • `Firebase Authentication` • `Firebase Hosting` • `REST / Fetch API` • `Offline Persistence` |
-| **Performance & Qualidade** | `Core Web Vitals (LCP, INP, CLS)` • `Acessibilidade WCAG 2.2 AAA` • `SEO Técnico & Schema.org JSON-LD` • `Segurança OWASP Front-End` |
-| **Design & UI/UX** | `Mobile-First Responsive Design` • `Dark/Light Mode Nativo` • `Micro-interações a 60fps` • `Arquitetura Orientada à Conversão (CRO)` |
+| **Engenharia Front-End (100% Web)** | `HTML5 Semântico` • `CSS3 Grid & Custom Properties` • `JavaScript ES2026 Modular (UMD/CJS/Browser)` • `DOM API Segura` |
+| **Segurança Aplicada (OWASP Top 10)** | `Anti-XSS (DOM Sinks & Entity Escaping)` • `Anti-NoSQLi & Anti-Prototype Pollution` • `RateLimiter Sliding-Window` • `Hash FNV-1a 64-bit` • `CSP & HSTS` |
+| **Privacidade & Governança (LGPD)** | `Mascaramento Automático de PII (maskPII)` • `Consentimento Explícito Obrigatório (Art. 7/8)` • `Direito ao Esquecimento (Art. 18 purgeAllUserData)` |
+| **Persistência & Cloud Serverless** | `Firebase Firestore` • `Firebase Realtime Database` • `Firestore Security Rules Schema Validation` • `BroadcastChannel Real-Time Sync` |
+| **Testes & Qualidade Contínua** | `150 Testes Automatizados (node:test)` • `Aritmética Financeira em Centavos Inteiros` • `Acessibilidade WCAG 2.2 AAA` • `Core Web Vitals 100/100` |
 
 ---
 
 <div align="center">
 
-**Desenvolvido com rigor técnico por Julio Cesar (`@nonscs813-a11y`)**  
-*Engenharia Web Pura • Performance • Acessibilidade • Firebase Cloud*
+**Engenharia Web Sênior por Julio Cesar (`@nonscs813-a11y`)**  
+*Arquitetura Limpa • Segurança OWASP • Privacidade LGPD • 150 Testes Automatizados • Firebase Cloud*
 
 </div>
-
