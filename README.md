@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 ![Julio Cesar — Desenvolvedor Web Sênior & Arquiteto Front-End](./assets/hero-senior-web.gif)
 
@@ -60,7 +60,7 @@ Uma suíte completa de **10 aplicações web de produção** desenvolvidas com *
 | **07** | 🐾 **Mundo Pet & Veterinária**<br/>*Pet Shop, Banho & Tosa e Clínica* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/07-petshop-veterinaria-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/07-petshop-veterinaria-firebase/) | Agendamento de Banho & Tosa por porte/pelagem, cadastro do pet, controle de vacinas e status do atendimento ao vivo no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
 | **08** | ⚖️ **Valença & Associados**<br/>*Advocacia Empresarial & Civil* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/08-escritorio-advocacia-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/08-escritorio-advocacia-firebase/) | Triagem jurídica interativa por área (Empresarial, Imobiliário, Tributário, Sucessões), agendamento e protocolo no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
 | **09** | ☕ **Grão Nobre Cafeteria & Bistrô**<br/>*Cafés Especiais & Reserva de Mesas* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/09-cafeteria-bistro-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/09-cafeteria-bistro-firebase/) | Mapa interativo de reserva de mesas por ambiente, menu de cafés especiais SCA e pedidos sincronizados no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
-| **10** | ☀️ **Helios Energia Solar**<br/>*Engenharia Fotovoltaica & Projetos* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/10-energia-solar-engenharia-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/10-energia-solar-engenharia-firebase/) | Dimensionamento fotovoltaico (kWp), projeção de payback e geração de proposta de vistoria técnica no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
+| **10** | ☀️ **Helios Energia Solar**<br/>*Engenharia Fotovoltaica & Projetos* | 📂 [**Repositório**](https://github.com/nonscs813-a11y/nonscs813-a11y/tree/main/10-energia-solar-engenharia-firebase)<br/>🌐 [**Abrir Sistema Web**](https://nonscs813-a11y.github.io/nonscs813-a11y/10-energia-solar-engenharia-firebase/) | Dimensionamento fotovoltaico (kWp), projeção de payback e geração de proposta de vistoria técnica no Firebase. | `HTML5` `CSS3` `JS` `Firebase` |
 
 ---
 
@@ -81,3 +81,4 @@ Uma suíte completa de **10 aplicações web de produção** desenvolvidas com *
 *Engenharia Web Pura • Performance • Acessibilidade • Firebase Cloud*
 
 </div>
+

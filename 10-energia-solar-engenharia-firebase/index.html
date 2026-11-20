@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helios Engenharia & Energia Solar — Usinas Fotovoltaicas Residenciais, Rurais e Industriais com Homologação Completa | Sistema Web + Firebase</title>
+  <meta name="description" content="Helios Engenharia & Energia Solar em Goiânia, GO. Dimensione seu sistema solar com módulos N-Type Tier 1, calcule o payback real do investimento e gere sua solicitação de vistoria técnica no Firebase.">
+  <meta name="theme-color" content="#080D14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Helios Engenharia & Energia Solar",
+    "description": "Usinas Fotovoltaicas Residenciais, Rurais e Industriais com Homologação Completa",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Goiânia, GO",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- TOPBAR & NAVEGAÇÃO -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <span class="brand-badge">#10</span>
+        <div>
+          <strong class="brand-name">Helios Engenharia & Energia Solar</strong>
+          <span class="brand-city">Goiânia, GO • Firebase Cloud Sync</span>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="#servicos">Catálogo &amp; Serviços</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#agendamento">Novo Registro</a>
+        <a href="#painel-firebase" class="nav-pill-live">
+          <span class="pulse-dot"></span> Painel Firebase Live
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="hero-eyebrow">☀️ DIMENSIONAMENTO FOTOVOLTAICO & PROPOSTAS • FIREBASE CLOUD</span>
+          <h1 class="hero-title">Reduza até 92% da Conta de Energia com Engenharia Homologada.</h1>
+          <p class="hero-sub">Dimensione seu sistema solar com módulos N-Type Tier 1, calcule o payback real do investimento e gere sua solicitação de vistoria técnica no Firebase.</p>
+          <div class="hero-actions">
+            <a href="#agendamento" class="btn-primary">Solicitar Vistoria & Projeto ➔</a>
+            <a href="#servicos" class="btn-secondary">Sistemas & Kits Fotovoltaicos</a>
+          </div>
+          <div class="kpi-strip" role="region" aria-label="Indicadores de performance">
+            <div class="kpi-card">
+              <strong id="kpi-total-registros">3</strong>
+              <span>Registros no Firebase</span>
+            </div>
+            <div class="kpi-card">
+              <strong id="kpi-receita-estimada">R$ 0,00</strong>
+              <span>Volume Sincronizado</span>
+            </div>
+            <div class="kpi-card">
+              <strong>&lt; 18ms</strong>
+              <span>Latência Cloud Sync</span>
+            </div>
+            <div class="kpi-card">
+              <strong>100/100</strong>
+              <span>Core Web Vitals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WIDGET RÁPIDO DE SIMULAÇÃO & ORÇAMENTO -->
+        <aside id="simulador" class="calculator-card" aria-labelledby="calc-heading">
+          <div class="card-header-row">
+            <span class="status-tag">⚡ CÁLCULO INSTANTÂNEO</span>
+            <span class="mono-tag">collection: projetos_energia_solar</span>
+          </div>
+          <h2 id="calc-heading" class="card-title">Calculadora de Economia Solar (25 Anos) & Potência kWp</h2>
+          <p class="card-desc">Selecione os itens desejados abaixo para simular o valor total e carregar automaticamente no formulário do Firebase.</p>
+
+          <div id="calc-items-list" class="calc-items-list" role="group" aria-label="Itens para simulação"></div>
+
+          <div class="calc-summary">
+            <div>
+              <span class="calc-total-label">Total Estimado (<span id="calc-count">0</span> selecionados)</span>
+              <strong id="calc-total-value" class="calc-total-value">R$ 0,00</strong>
+            </div>
+            <button type="button" id="btn-apply-sim" class="btn-primary btn-sm">Usar na Reserva ➔</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE SERVIÇOS / PRODUTOS COM FILTRO REATIVO -->
+    <section id="servicos" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">CATÁLOGO INTERATIVO • ES2026</span>
+            <h2 class="section-title">Serviços &amp; Soluções Disponíveis</h2>
+          </div>
+          <div class="filter-controls">
+            <input type="search" id="search-services" class="search-input" placeholder="Buscar serviço ou palavra-chave..." aria-label="Buscar serviço">
+            <div class="filter-chips" role="tablist">
+              <button type="button" class="filter-chip is-active" data-cat="Todos">Todos</button>
+              <button type="button" class="filter-chip" data-cat="Empresarial">Empresarial</button>
+          <button type="button" class="filter-chip" data-cat="Híbrido / Sítio">Híbrido / Sítio</button>
+          <button type="button" class="filter-chip" data-cat="Manutenção">Manutenção</button>
+          <button type="button" class="filter-chip" data-cat="Mobilidade">Mobilidade</button>
+          <button type="button" class="filter-chip" data-cat="Residencial">Residencial</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="services-grid" class="services-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- MÓDULO TRANSACIONAL: FORMULÁRIO + PAINEL FIREBASE EM TEMPO REAL -->
+    <section id="agendamento" class="section-block section-alt">
+      <div class="container workspace-grid">
+        <!-- FORMULÁRIO DE PERSISTÊNCIA NO FIREBASE -->
+        <div class="form-panel">
+          <div class="card-header-row">
+            <span class="status-tag">🔥 FIREBASE CLOUD WRITE</span>
+            <span id="firebase-conn-badge" class="conn-badge">● Conectado (Realtime Sync)</span>
+          </div>
+          <h2 class="card-title">Registrar Solicitação de Projeto no Firebase</h2>
+          <p class="card-desc">Os dados preenchidos são validados e gravados instantaneamente na coleção <code>projetos_energia_solar</code> com atualização reativa da tabela ao lado.</p>
+
+          <form id="firebase-form" class="tx-form" novalidate>
+            <div class="form-group">
+              <label for="input-cliente">Cliente / Propriedade *</label>
+              <input type="text" id="input-cliente" required placeholder="Ex: Fazenda Santa Helena / Residência Alphaville" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="input-contato">WhatsApp & Consumo Médio (R$/mês) *</label>
+              <input type="text" id="input-contato" required placeholder="(62) 99840-5000 • Conta: R$ 950/mês">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="select-profissional">Tipo de Telhado / Solo</label>
+                <select id="select-profissional">
+                  <option value="Telhado Cerâmico / Colonial">Telhado Cerâmico / Colonial</option>
+                <option value="Telhado Fibrocimento / Metálico (Galpão)">Telhado Fibrocimento / Metálico (Galpão)</option>
+                <option value="Usina de Solo Rural + Bombeamento">Usina de Solo Rural + Bombeamento</option>
+                <option value="Carport Solar (Estacionamento)">Carport Solar (Estacionamento)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="select-horario">Engenheiro Eletricista Responsável</label>
+                <select id="select-horario">
+                  <option value="Eng. Rafael Moura (CREA-GO • Residencial & Condomínios)">Eng. Rafael Moura (CREA-GO • Residencial & Condomínios)</option>
+                <option value="Eng. Fernando Castro (CREA-GO • Agro & Industrial)">Eng. Fernando Castro (CREA-GO • Agro & Industrial)</option>
+                <option value="Eng. Lucas Prado (CREA-GO • Sistemas Híbridos c/ Bateria)">Eng. Lucas Prado (CREA-GO • Sistemas Híbridos c/ Bateria)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="select-servico">Serviço / Pacote Principal *</label>
+              <select id="select-servico">
+                <option value="s1" data-price="14900.0">Sistema Residencial 5.2 kWp (Geração ~650 kWh/mês • Contas até R$ 650) — R$ 14.900,00</option>
+                <option value="s2" data-price="23400.0">Sistema Residencial Premium 8.8 kWp (Geração ~1.100 kWh/mês • Contas até R$ 1.150) — R$ 23.400,00</option>
+                <option value="s3" data-price="46800.0">Sistema Híbrido Zero-Apagão 10.5 kWp + Banco de Baterias Lítio LiFePO4 10kWh — R$ 46.800,00</option>
+                <option value="s4" data-price="58900.0">Usina Comercial / Galpão 25.0 kWp (Geração ~3.200 kWh/mês • Contas até R$ 3.400) — R$ 58.900,00</option>
+                <option value="s5" data-price="5400.0">Carregador Veicular Wallbox 22kW Integrado à Geração Solar — R$ 5.400,00</option>
+                <option value="s6" data-price="680.0">Limpeza Técnica de Placas Solares + Termografia Infravermelha com Drone — R$ 680,00</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="input-obs">Observações Técnicas (Opcional)</label>
+              <input type="text" id="input-obs" placeholder="Alguma preferência ou detalhe adicional?">
+            </div>
+
+            <button type="submit" class="btn-primary btn-full">
+              Gravar Registro no Firebase Cloud ➔
+            </button>
+          </form>
+        </div>
+
+        <!-- PAINEL EM TEMPO REAL DO BANCO DE DADOS FIREBASE -->
+        <div id="painel-firebase" class="table-panel">
+          <div class="table-panel-header">
+            <div>
+              <span class="section-eyebrow">TRANSAÇÕES EM TEMPO REAL • FIRESTORE / REALTIME DB</span>
+              <h2 class="card-title">Pipeline de Engenharia — Projetos Homologados (Firebase)</h2>
+            </div>
+            <div class="table-actions">
+              <button type="button" id="btn-export-json" class="btn-secondary btn-sm">Exportar JSON</button>
+              <button type="button" id="btn-reset-demo" class="btn-secondary btn-sm">Restaurar Dados Demo</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="firebase-table" aria-label="Pipeline de Engenharia — Projetos Homologados (Firebase)">
+              <thead>
+                <tr>
+                  <th>Cliente / Identificação</th>
+                  <th>Serviço &amp; Responsável</th>
+                  <th>Janela / Horário</th>
+                  <th>Valor</th>
+                  <th>Status Cloud</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="firebase-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-banner" class="toast-banner" role="status" aria-live="polite" hidden></div>
+
+  <!-- FOOTER TÉCNICO DO PORTFÓLIO -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Helios Engenharia & Energia Solar</strong> • Projeto #10 do Portfólio Sênior de <a href="https://github.com/nonscs813-a11y" target="_blank" rel="noopener">Julio Cesar (@nonscs813-a11y)</a>
+        <p class="footer-sub">Arquitetura 100% Web Nativa: <code>1 index.html</code> + <code>1 styles.css</code> + <code>1 app.js</code> + <code>Firebase Cloud Database</code>.</p>
+      </div>
+      <div class="footer-badges">
+        <span>HTML5 Semântico</span>
+        <span>CSS3 Design System</span>
+        <span>ES2026 Modular</span>
+        <span>Firebase Realtime</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
